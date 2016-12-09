@@ -111,7 +111,7 @@ void Update_SPRITE_PRINCESS() {
 
 	switch(princes_state) {
 		case PRINCESS_STATE_NORMAL:
-			MovePrincess(THIS, sprite_manager_current_index);
+			MovePrincess(THIS, THIS_IDX);
 	
 			//Choose idle anim or walk
 			if(KEY_PRESSED(J_RIGHT) || KEY_PRESSED(J_LEFT) ) {
@@ -134,7 +134,7 @@ void Update_SPRITE_PRINCESS() {
 
 		case PRINCESS_STATE_JUMPING:
 			SetSpriteAnim(THIS, anim_jump, 33u);
-			MovePrincess(THIS, sprite_manager_current_index);
+			MovePrincess(THIS, THIS_IDX);
 			break;
 
 		case PRINCESS_STATE_FIRE:
@@ -142,7 +142,7 @@ void Update_SPRITE_PRINCESS() {
 				princes_state = PRINCESS_STATE_NORMAL;
 				SpriteManagerRemoveSprite(axe_sprite);
 			} else {
-				MovePrincess(THIS, sprite_manager_current_index);
+				MovePrincess(THIS, THIS_IDX);
 				UpdateAxePos();
 			}
 			break;
@@ -164,7 +164,7 @@ void Update_SPRITE_PRINCESS() {
 			princes_state = PRINCESS_STATE_NORMAL;
 		}
 
-		CheckCollisionTile(THIS, sprite_manager_current_index);
+		CheckCollisionTile(THIS, THIS_IDX);
 	}
 #endif
 
@@ -173,7 +173,7 @@ void Update_SPRITE_PRINCESS() {
 		spr = sprite_manager_sprites[sprite_manager_updatables[i + 1u]];
 		if(spr->type == SPRITE_ZURRAPA || spr->type == SPRITE_AZNAR) {
 			if(CheckCollision(THIS, spr)) {
-				Die(THIS, sprite_manager_current_index);
+				Die(THIS, THIS_IDX);
 			}
 		} else if(spr->type == SPRITE_FLAG) {
 			if(CheckCollision(THIS, spr)) {
