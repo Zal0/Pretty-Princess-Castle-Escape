@@ -7,12 +7,8 @@ UINT8 bank_SPRITE_AXE = 2;
 #include "SpriteManager.h"
 #include "BitBit3.h"
 
-extern UINT8 princess_idx;
-const UINT8 anim_axe[] = {1, 9};
-
-void Start_SPRITE_AXE(struct Sprite* sprite) {
-	InitSprite(sprite, FRAME_16x16, princess_idx >> 2);
-	SetSpriteAnim(sprite, anim_axe, 5u);
+void Start_SPRITE_AXE() {
+	THIS->current_frame = 9u;
 }
 
 void Update_SPRITE_AXE() {
@@ -23,13 +19,14 @@ void Update_SPRITE_AXE() {
 	for(i = 0u; i != sprite_manager_updatables[0]; ++i) {
 		spr = sprite_manager_sprites[sprite_manager_updatables[i + 1u]];
 		if(spr->type == SPRITE_ZURRAPA || spr->type == SPRITE_AZNAR) {
-			if(CheckCollision(sprite_manager_current_sprite, spr)) {
-				spr2 = SpriteManagerAdd(SPRITE_DEAD_PARTICLE);
-				spr2->x = spr->x;
-				spr2->y = spr->y;
-				
+			if(CheckCollision(THIS, spr)) {
+				spr2 = SpriteManagerAdd(SPRITE_PARTICLE, spr->x, spr->y);
+
 				SpriteManagerRemove(i);
 			}
 		}
 	}
+}
+
+void Destroy_SPRITE_AXE() {
 }
