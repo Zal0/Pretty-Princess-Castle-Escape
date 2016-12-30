@@ -27,6 +27,11 @@ UINT8 level;
 
 struct Sprite* game_over_particle;
 
+extern UINT8 spriteIdxs[];
+void SpriteManagerLoadSubsprite(UINT8 sprite_type, UINT8 sprite_type_source) {
+	spriteIdxs[sprite_type] = spriteIdxs[sprite_type_source];
+}
+
 void Start_STATE_GAME() {
 	struct Sprite* princess_sprite;
 
