@@ -15,6 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BitBit3.c" />
+    <ClCompile Include="src\BitBit3_Init.c" />
     <ClCompile Include="src\SpriteAxe.c" />
     <ClCompile Include="src\SpriteAznar.c" />
     <ClCompile Include="src\SpriteFlag.c" />

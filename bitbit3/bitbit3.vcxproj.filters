@@ -62,6 +62,9 @@
     <ClCompile Include="src\StateWin.c">
       <Filter>Source Files\States</Filter>
     </ClCompile>
+    <ClCompile Include="src\BitBit3_Init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Makefile" />
