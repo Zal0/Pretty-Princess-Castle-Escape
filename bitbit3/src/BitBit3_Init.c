@@ -40,7 +40,7 @@ void InitStates() {
 }
 
 void InitSprites() {
-	INIT_SPRITE(SPRITE_PRINCESS, princess,  2, FRAME_16x16, 10);
+	INIT_SPRITE_COLOR(SPRITE_PRINCESS, princess,  2, FRAME_16x16, 10);
 	INIT_SPRITE(SPRITE_ZURRAPA,  zurrapa,   0, FRAME_16x16,  2);
 	INIT_SPRITE(SPRITE_PARTICLE, particles, 2, FRAME_16x16,  6);
 	INIT_SPRITE(SPRITE_AXE,      princess,  2, FRAME_16x16, 10);
