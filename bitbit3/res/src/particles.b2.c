@@ -12,9 +12,9 @@
   Tile size            : 16 x 16
   Tiles                : 0 to 5
 
-  Palette colors       : None.
+  Palette colors       : Included.
   SGB Palette          : None.
-  CGB Palette          : None.
+  CGB Palette          : 1 Byte per entry.
 
   Convert to metatiles : No.
 
@@ -22,6 +22,11 @@
 
 */
 
+/* CGBpalette entries. */
+const unsigned  char particlesCGB[] =
+{
+  0x04,0x04,0x04,0x04,0x04,0x04
+};
 /* Start of tile array. */
 const unsigned  char particles[] =
 {

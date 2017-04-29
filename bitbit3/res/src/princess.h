@@ -58,39 +58,39 @@
 
 /* Gameboy Color palette 1 */
 #define princessCGBPal1c0 32767
-#define princessCGBPal1c1 572
+#define princessCGBPal1c1 639
 #define princessCGBPal1c2 14356
 #define princessCGBPal1c3 34
 
 /* Gameboy Color palette 2 */
-#define princessCGBPal2c0 6076
-#define princessCGBPal2c1 8935
-#define princessCGBPal2c2 6596
-#define princessCGBPal2c3 5344
+#define princessCGBPal2c0 32767
+#define princessCGBPal2c1 639
+#define princessCGBPal2c2 10570
+#define princessCGBPal2c3 34
 
 /* Gameboy Color palette 3 */
-#define princessCGBPal3c0 6076
-#define princessCGBPal3c1 8935
-#define princessCGBPal3c2 6596
-#define princessCGBPal3c3 5344
+#define princessCGBPal3c0 32767
+#define princessCGBPal3c1 445
+#define princessCGBPal3c2 337
+#define princessCGBPal3c3 34
 
 /* Gameboy Color palette 4 */
-#define princessCGBPal4c0 6076
-#define princessCGBPal4c1 8935
-#define princessCGBPal4c2 6596
-#define princessCGBPal4c3 5344
+#define princessCGBPal4c0 32767
+#define princessCGBPal4c1 14942
+#define princessCGBPal4c2 159
+#define princessCGBPal4c3 118
 
 /* Gameboy Color palette 5 */
-#define princessCGBPal5c0 6076
-#define princessCGBPal5c1 8935
-#define princessCGBPal5c2 6596
-#define princessCGBPal5c3 5344
+#define princessCGBPal5c0 32767
+#define princessCGBPal5c1 23254
+#define princessCGBPal5c2 255
+#define princessCGBPal5c3 34
 
 /* Gameboy Color palette 6 */
-#define princessCGBPal6c0 6076
-#define princessCGBPal6c1 8935
-#define princessCGBPal6c2 6596
-#define princessCGBPal6c3 5344
+#define princessCGBPal6c0 32767
+#define princessCGBPal6c1 31961
+#define princessCGBPal6c2 863
+#define princessCGBPal6c3 34
 
 /* Gameboy Color palette 7 */
 #define princessCGBPal7c0 6076

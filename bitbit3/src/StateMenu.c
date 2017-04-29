@@ -16,8 +16,13 @@ extern UINT8 level;
 extern UINT16 reset_x;
 extern UINT16 reset_y;
 
+#include "Palette.h"
+const UINT16 bgPALMenu[] = {PALETTE_FROM_HEADER(splashtiles)};
+
 void Start_STATE_MENU() {
-	InitScrollTiles(0, 102, splashtiles, 2);
+	SetPalette(BG_PALETTE, 0, 8, bgPALMenu, bank_STATE_MENU);
+
+	InitScrollTilesColor(0, 102, splashtiles, 2, splashtilesCGB);
 	InitScroll(splashmapWidth, splashmapHeight, splashmap, 0, 0, 2);
 	SHOW_BKG;
 
