@@ -94,9 +94,9 @@
 
 /* Gameboy Color palette 7 */
 #define tilemapCGBPal7c0 25438
-#define tilemapCGBPal7c1 14313
+#define tilemapCGBPal7c1 10976
 #define tilemapCGBPal7c2 1540
-#define tilemapCGBPal7c3 29659
+#define tilemapCGBPal7c3 12277
 /* CGBpalette entries. */
 extern unsigned char tilemapCGB[];
 /* Start of tile array. */
