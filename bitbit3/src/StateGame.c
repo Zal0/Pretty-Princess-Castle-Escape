@@ -55,7 +55,7 @@ void Start_STATE_GAME() {
 	
 	princess_sprite = SpriteManagerAdd(SPRITE_PRINCESS, reset_x, reset_y);
 
-	InitScrollTilesColor(0, 61, tilemap, 2, tilemapCGB);
+	InitScrollTilesColor(0, 67, tilemap, 2, tilemapCGB);
 	switch(level) {
 		case 0:
 			InitScroll(level1Width, level1Height, level1 , collision_tiles, 0, 3);
@@ -66,8 +66,12 @@ void Start_STATE_GAME() {
 	}
 	SHOW_BKG;
 
-	SetPalette(SPRITES_PALETTE, 0, 8, spritesPAL, bank_STATE_GAME);
-	SetPalette(BG_PALETTE,      0, 8, bgPAL,      bank_STATE_GAME);
+	if(_cpu == CGB_TYPE) {
+		SetPalette(SPRITES_PALETTE, 0, 8, spritesPAL, bank_STATE_GAME);
+		SetPalette(BG_PALETTE,      0, 8, bgPAL,      bank_STATE_GAME);
+	} else {
+		BGP_REG = PAL_DEF(0, 1, 2, 0);
+	}
 
 	PlayMusic(level_mod_Data, 3, 1);
 }
