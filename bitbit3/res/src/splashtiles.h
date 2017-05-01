@@ -69,10 +69,10 @@
 #define splashtilesCGBPal2c3 0
 
 /* Gameboy Color palette 3 */
-#define splashtilesCGBPal3c0 6076
-#define splashtilesCGBPal3c1 8935
-#define splashtilesCGBPal3c2 6596
-#define splashtilesCGBPal3c3 5344
+#define splashtilesCGBPal3c0 29566
+#define splashtilesCGBPal3c1 5503
+#define splashtilesCGBPal3c2 119
+#define splashtilesCGBPal3c3 21695
 
 /* Gameboy Color palette 4 */
 #define splashtilesCGBPal4c0 6076
