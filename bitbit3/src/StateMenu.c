@@ -22,7 +22,7 @@ const UINT16 bgPALMenu[] = {PALETTE_FROM_HEADER(splashtiles)};
 void Start_STATE_MENU() {
 	SetPalette(BG_PALETTE, 0, 8, bgPALMenu, bank_STATE_MENU);
 
-	InitScrollTilesColor(0, 102, splashtiles, 2, splashtilesCGB);
+	InitScrollTilesColor(0, 102, splashtiles, 2);
 	InitScroll(splashmapWidth, splashmapHeight, splashmap, 0, 0, 2);
 	SHOW_BKG;
 

@@ -19,7 +19,7 @@ extern const unsigned char * gameover_mod_Data[];
 void Start_STATE_WIN() {
 	SetPalette(BG_PALETTE, 0, 8, bgPALWin, bank_STATE_WIN);
 
-	InitScrollTilesColor(0, 104, splashtiles, 2, splashtilesCGB);
+	InitScrollTilesColor(0, 104, splashtiles, 2);
 	InitScroll(winmapWidth, winmapHeight, winmap, 0, 0, 2);
 	SHOW_BKG;
 
