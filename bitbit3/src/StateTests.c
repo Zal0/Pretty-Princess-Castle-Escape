@@ -1,4 +1,4 @@
-#pragma bank=2
+#pragma bank 2
 #include "StateTests.h"
 UINT8 bank_STATE_TESTS = 2;
 

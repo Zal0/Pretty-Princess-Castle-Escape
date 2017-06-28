@@ -1,4 +1,4 @@
-#pragma bank=2
+#pragma bank 2
 #include "StateDisclaimer.h"
 UINT8 bank_STATE_DISCLAIMER = 0;
 
