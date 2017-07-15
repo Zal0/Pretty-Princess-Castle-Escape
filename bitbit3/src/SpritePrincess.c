@@ -77,11 +77,11 @@ void CheckCollisionTile(struct Sprite* sprite, UINT8 idx) {
 void MovePrincess(struct Sprite* sprite, UINT8 idx) {
 	if(KEY_PRESSED(J_RIGHT)) {
 		tile_collision = TranslateSprite(sprite, 1 << delta_time, 0);
-		sprite->flags = 0u;
+		SPRITE_UNSET_VMIRROR(THIS);
 		CheckCollisionTile(sprite, idx);
 	} else if(KEY_PRESSED(J_LEFT)) {
 		tile_collision = TranslateSprite(sprite, -1 << delta_time, 0);
-		sprite->flags = OAM_VERTICAL_FLAG;
+		SPRITE_SET_VMIRROR(THIS);
 		CheckCollisionTile(sprite, idx);
 	}
 	
@@ -98,7 +98,7 @@ void MovePrincess(struct Sprite* sprite, UINT8 idx) {
 
 void UpdateAxePos() {
 	axe_sprite->flags = THIS->flags;
-	if(THIS->flags & OAM_VERTICAL_FLAG) 
+	if(SPRITE_GET_VMIRROR(THIS)) 
 		axe_sprite->x = THIS->x - 16u;
 	else
 		axe_sprite->x = THIS->x + 16u; 
