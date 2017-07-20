@@ -66,12 +66,13 @@ void Start_STATE_GAME() {
 	}
 	SHOW_BKG;
 
+#ifdef CGB
 	if(_cpu == CGB_TYPE) {
 		SetPalette(SPRITES_PALETTE, 0, 8, spritesPAL, bank_STATE_GAME);
 		SetPalette(BG_PALETTE,      0, 8, bgPAL,      bank_STATE_GAME);
-	} else {
+	} else 
+#endif
 		BGP_REG = PAL_DEF(0, 1, 2, 0);
-	}
 
 	PlayMusic(level_mod_Data, 3, 1);
 }
