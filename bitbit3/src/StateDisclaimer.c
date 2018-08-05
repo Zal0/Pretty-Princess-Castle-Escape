@@ -1,5 +1,5 @@
 #pragma bank 2
-#include "StateDisclaimer.h"
+#include "main.h"
 UINT8 bank_STATE_DISCLAIMER = 0;
 
 #include <gb/gb.h>

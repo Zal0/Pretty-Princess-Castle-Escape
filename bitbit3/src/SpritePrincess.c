@@ -1,10 +1,10 @@
 #pragma bank 2
-#include "SpritePrincess.h"
+#include "main.h"
 UINT8 bank_SPRITE_PRINCESS = 2;
 
 #include "gb/gb.h"
 
-#include "BitBit3.h"
+#include "ZGBMain.h"
 #include "Sprite.h"
 #include "Keys.h"
 #include "Scroll.h"

@@ -1,5 +1,5 @@
 #pragma bank 2
-#include "SpriteAznar.h"
+#include "main.h"
 UINT8 bank_SPRITE_AZNAR = 2;
 
 #include "../res/src/aznar.h"

@@ -1,11 +1,11 @@
 #pragma bank 2
-#include "SpriteAxe.h"
+#include "main.h"
 UINT8 bank_SPRITE_AXE = 2;
 
 #include <gb/gb.h>
 
 #include "SpriteManager.h"
-#include "BitBit3.h"
+#include "ZGBMain.h"
 
 void Start_SPRITE_AXE() {
 	THIS->current_frame = 9u;

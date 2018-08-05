@@ -1,5 +1,5 @@
 #pragma bank 2
-#include "SpriteFlag.h"
+#include "main.h"
 UINT8 bank_SPRITE_FLAG = 2;
 
 #include "SpriteManager.h"

@@ -22,8 +22,7 @@
     <None Include="src\Makefile" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\BitBit3.c" />
-    <ClCompile Include="src\BitBit3_Init.c" />
+    <ClCompile Include="src\ZGBMain.c" />
     <ClCompile Include="src\SpriteAxe.c" />
     <ClCompile Include="src\SpriteAznar.c" />
     <ClCompile Include="src\SpriteFlag.c" />
@@ -38,19 +37,7 @@
     <ClCompile Include="src\StateWin.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\BitBit3.h" />
-    <ClInclude Include="include\SpriteAxe.h" />
-    <ClInclude Include="include\SpriteAznar.h" />
-    <ClInclude Include="include\SpriteFlag.h" />
-    <ClInclude Include="include\SpriteParticle.h" />
-    <ClInclude Include="include\SpritePrincess.h" />
-    <ClInclude Include="include\SpriteZurrapa.h" />
-    <ClInclude Include="include\StateDisclaimer.h" />
-    <ClInclude Include="include\StateGame.h" />
-    <ClInclude Include="include\StateGameOver.h" />
-    <ClInclude Include="include\StateMenu.h" />
-    <ClInclude Include="include\StateTests.h" />
-    <ClInclude Include="include\StateWin.h" />
+    <ClInclude Include="include\ZGBMain.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{567BA24E-A974-432F-BD16-A2F5043954FF}</ProjectGuid>

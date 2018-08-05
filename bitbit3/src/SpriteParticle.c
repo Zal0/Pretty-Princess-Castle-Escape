@@ -1,5 +1,5 @@
 #pragma bank 2
-#include "SpriteParticle.h"
+#include "main.h"
 UINT8 bank_SPRITE_PARTICLE = 2;
 
 #include "SpriteManager.h"

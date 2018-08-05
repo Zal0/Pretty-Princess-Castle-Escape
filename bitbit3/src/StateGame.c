@@ -1,5 +1,5 @@
 #pragma bank 2
-#include "StateGame.h"
+#include "main.h"
 UINT8 bank_STATE_GAME = 2;
 
 #include "Scroll.h"
@@ -7,14 +7,12 @@ UINT8 bank_STATE_GAME = 2;
 #include "Sprite.h"
 #include "Keys.h"
 #include "SpriteManager.h"
-#include "SpritePrincess.h"
-#include "SpriteAznar.h"
 
 #include "../res/src/map.h"
 #include "../res/src/map2.h"
 #include "../res/src/tilemap.h"
 
-#include "BitBit3.h"
+#include "ZGBMain.h"
 #include "gbt_player.h"
 
 #include "Palette.h"
