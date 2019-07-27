@@ -53,7 +53,7 @@ void Start_STATE_GAME() {
 	
 	princess_sprite = SpriteManagerAdd(SPRITE_PRINCESS, reset_x, reset_y);
 
-	InitScrollTilesColor(0, 67, tilemap, 2);
+	InitScrollTiles(0, &tilemap, bank_tilemap);
 	switch(level) {
 		case 0:
 			InitScroll(level1Width, level1Height, level1 , collision_tiles, 0, 3);
