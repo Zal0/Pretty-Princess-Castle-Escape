@@ -19,8 +19,8 @@ extern const unsigned char * gameover_mod_Data[];
 void Start_STATE_WIN() {
 	SetPalette(BG_PALETTE, 0, 8, bgPALWin, bank_STATE_WIN);
 
-	InitScrollTiles(0, &splashtiles, bank_splashtiles);
-	InitScroll(winmapWidth, winmapHeight, winmap, 0, 0, 2);
+	InitScrollTiles(0, &splashtiles);
+	InitScroll(&winmap, 0, 0);
 	SHOW_BKG;
 
 	PlayMusic(gameover_mod_Data, 3, 0);

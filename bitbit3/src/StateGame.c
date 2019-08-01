@@ -53,13 +53,13 @@ void Start_STATE_GAME() {
 	
 	princess_sprite = SpriteManagerAdd(SPRITE_PRINCESS, reset_x, reset_y);
 
-	InitScrollTiles(0, &tilemap, bank_tilemap);
+	InitScrollTiles(0, &tilemap);
 	switch(level) {
 		case 0:
-			InitScroll(level1Width, level1Height, level1 , collision_tiles, 0, 3);
+			InitScroll(&level1 , collision_tiles, 0);
 			break;
 		case 1:
-			InitScroll(level2Width, level2Height, level2, collision_tiles, 0, 3);
+			InitScroll(&level2, collision_tiles, 0);
 			break;
 	}
 	SHOW_BKG;

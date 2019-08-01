@@ -13,8 +13,8 @@ UINT8 bank_STATE_GAME_OVER = 2;
 extern const unsigned char * gameover_mod_Data[];
 
 void Start_STATE_GAME_OVER() {
-	InitScrollTiles(0, &tilesgameover, bank_tilesgameover);
-	InitScroll(gameoverWidth, gameoverHeight, gameover, 0, 0, 2);
+	InitScrollTiles(0, &tilesgameover);
+	InitScroll(&gameover, 0, 0);
 	SHOW_BKG;
 
 	PlayMusic(gameover_mod_Data, 3, 0);
