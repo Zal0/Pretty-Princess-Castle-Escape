@@ -8,7 +8,7 @@ UINT8 bank_SPRITE_AXE = 2;
 #include "ZGBMain.h"
 
 void Start_SPRITE_AXE() {
-	THIS->current_frame = 9u;
+	SET_FRAME(THIS, (UINT8)9u);
 }
 
 void Update_SPRITE_AXE() {

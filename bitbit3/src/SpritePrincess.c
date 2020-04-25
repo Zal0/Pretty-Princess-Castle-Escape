@@ -138,7 +138,7 @@ void Update_SPRITE_PRINCESS() {
 			break;
 
 		case PRINCESS_STATE_FIRE:
-			if(THIS->current_frame == 1) {
+			if(THIS->anim_frame == 1) {
 				princes_state = PRINCESS_STATE_NORMAL;
 				SpriteManagerRemoveSprite(axe_sprite);
 			} else {

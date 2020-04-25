@@ -76,7 +76,7 @@ void Start_STATE_GAME() {
 }
 
 void Update_STATE_GAME() {
-	if(game_over_particle && game_over_particle->current_frame == 5) {
+	if(game_over_particle && game_over_particle->anim_frame == 5) {
 		SetState(STATE_GAME);
 	}
 }
