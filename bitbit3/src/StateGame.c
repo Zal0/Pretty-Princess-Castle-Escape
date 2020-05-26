@@ -1,6 +1,5 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_STATE_GAME = 2;
 
 #include "Scroll.h"
 #include "Frame.h"
@@ -10,16 +9,16 @@ UINT8 bank_STATE_GAME = 2;
 
 #include "../res/src/map.h"
 #include "../res/src/map2.h"
-#include "../res/src/tilemap.h"
+#include "../res/src/carnage.h"
 
 #include "ZGBMain.h"
 #include "gbt_player.h"
 
 #include "Palette.h"
 #include "../res/src/princess.h"
-#include "../res/src/tilemap.h"
+
 const UINT16 spritesPAL[] = {PALETTE_FROM_HEADER(princess)};
-const UINT16 bgPAL[] = {PALETTE_FROM_HEADER(tilemap)};
+const UINT16 bgPAL[] = {PALETTE_FROM_HEADER(carnage)};
 
 
 extern const unsigned char * level_mod_Data[];
@@ -37,26 +36,25 @@ void SpriteManagerLoadSubsprite(UINT8 sprite_type, UINT8 sprite_type_source) {
 	spriteIdxs[sprite_type] = spriteIdxs[sprite_type_source];
 }
 
-void Start_STATE_GAME() {
+void Start_StateGame() {
 	struct Sprite* princess_sprite;
 
 	game_over_particle = 0;
 
 	SPRITES_8x16;
-	SpriteManagerLoad(SPRITE_PRINCESS);
-	SpriteManagerLoadSubsprite(SPRITE_AXE, SPRITE_PRINCESS);
-	SpriteManagerLoad(SPRITE_ZURRAPA);
-	SpriteManagerLoad(SPRITE_PARTICLE);
-	SpriteManagerLoad(SPRITE_AZNAR);
-	SpriteManagerLoad(SPRITE_FLAG);
+	SpriteManagerLoad(SpritePrincess);
+	SpriteManagerLoadSubsprite(SpriteAxe, SpritePrincess);
+	SpriteManagerLoad(SpriteZurrapa);
+	SpriteManagerLoad(SpriteParticle);
+	SpriteManagerLoad(SpriteAznar);
+	SpriteManagerLoad(SpriteFlag);
 	SHOW_SPRITES;
 	
-	princess_sprite = SpriteManagerAdd(SPRITE_PRINCESS, reset_x, reset_y);
+	princess_sprite = SpriteManagerAdd(SpritePrincess, reset_x, reset_y);
 
-	InitScrollTiles(0, &tilemap);
 	switch(level) {
 		case 0:
-			InitScroll(&level1 , collision_tiles, 0);
+			InitScroll(&level1, collision_tiles, 0);
 			break;
 		case 1:
 			InitScroll(&level2, collision_tiles, 0);
@@ -66,8 +64,8 @@ void Start_STATE_GAME() {
 
 #ifdef CGB
 	if(_cpu == CGB_TYPE) {
-		SetPalette(SPRITES_PALETTE, 0, 8, spritesPAL, bank_STATE_GAME);
-		SetPalette(BG_PALETTE,      0, 8, bgPAL,      bank_STATE_GAME);
+		SetPalette(SPRITES_PALETTE, 0, 8, spritesPAL, bank_StateGame);
+		SetPalette(BG_PALETTE,      0, 8, bgPAL,      bank_StateGame);
 	} else 
 #endif
 		BGP_REG = PAL_DEF(0, 1, 2, 0);
@@ -75,9 +73,9 @@ void Start_STATE_GAME() {
 	PlayMusic(level_mod_Data, 3, 1);
 }
 
-void Update_STATE_GAME() {
+void Update_StateGame() {
 	if(game_over_particle && game_over_particle->anim_frame == 5) {
-		SetState(STATE_GAME);
+		SetState(StateGame);
 	}
 }
 

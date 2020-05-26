@@ -1,6 +1,5 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_SPRITE_AZNAR = 2;
 
 #include "../res/src/aznar.h"
 #include "SpriteManager.h"
@@ -8,7 +7,7 @@ UINT8 bank_SPRITE_AZNAR = 2;
 
 const UINT8 anim_aznar_walk[] = {8, 0, 1, 2, 3, 4, 3, 2, 1};
 
-void Start_SPRITE_AZNAR() {
+void Start_SpriteAznar() {
 	SetSpriteAnim(THIS, anim_aznar_walk, 20u);
 
 	THIS->coll_x += 4;
@@ -17,7 +16,7 @@ void Start_SPRITE_AZNAR() {
 	THIS->lim_y = 160u;
 }
 
-void Update_SPRITE_AZNAR() {
+void Update_SpriteAznar() {
 	if(SPRITE_GET_VMIRROR(THIS)) {
 		//moving left
 		if(TranslateSprite(THIS, -1, 0)) {
@@ -35,5 +34,5 @@ void Update_SPRITE_AZNAR() {
 	}
 }
 
-void Destroy_SPRITE_AZNAR() {
+void Destroy_SpriteAznar() {
 }

@@ -1,6 +1,5 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_STATE_MENU = 2;
 
 #include <gb/gb.h>
 #include "ZGBMain.h"
@@ -19,10 +18,9 @@ extern UINT16 reset_y;
 #include "Palette.h"
 const UINT16 bgPALMenu[] = {PALETTE_FROM_HEADER(splashtiles)};
 
-void Start_STATE_MENU() {
-	SetPalette(BG_PALETTE, 0, 8, bgPALMenu, bank_STATE_MENU);
+void Start_StateMenu() {
+	SetPalette(BG_PALETTE, 0, 8, bgPALMenu, bank_StateMenu);
 
-	InitScrollTiles(0, &splashtiles);
 	InitScroll(&splashmap, 0, 0);
 	SHOW_BKG;
 
@@ -30,11 +28,11 @@ void Start_STATE_MENU() {
 	PlayMusic(start_mod_Data, 2, 1);
 }
 
-void Update_STATE_MENU() {
+void Update_StateMenu() {
 	if(KEY_TICKED(J_START)) {
 		reset_x = 32;
 		reset_y = 112;
-		SetState(STATE_GAME);
+		SetState(StateGame);
 	}
 
 	/*if(KEY_TICKED(J_UP)) {

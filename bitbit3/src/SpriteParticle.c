@@ -1,21 +1,20 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_SPRITE_PARTICLE = 2;
 
 #include "SpriteManager.h"
 
 const UINT8 anim_explosion[] = {6, 0, 1, 2, 3, 4, 5};
 
-void Start_SPRITE_PARTICLE() {
+void Start_SpriteParticle() {
 	SetSpriteAnim(THIS, anim_explosion, 5u);
 	THIS->anim_speed = 33u;
 }
 
-void Update_SPRITE_PARTICLE() {
+void Update_SpriteParticle() {
 	if(THIS->anim_frame == 5) {
 		SpriteManagerRemove(THIS_IDX);
 	}
 }
 
-void Destroy_SPRITE_PARTICLE() {
+void Destroy_SpriteParticle() {
 }

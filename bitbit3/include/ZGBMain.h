@@ -2,21 +2,21 @@
 #define ZGBMAIN_H
 
 #define STATES           \
-_STATE(STATE_DISCLAIMER) \
-_STATE(STATE_MENU)       \
-_STATE(STATE_GAME)       \
-_STATE(STATE_GAME_OVER)  \
-_STATE(STATE_WIN)        \
-_STATE(STATE_TESTS)      \
+_STATE(StateDisclaimer) \
+_STATE(StateMenu)       \
+_STATE(StateGame)       \
+_STATE(StateGameOver)  \
+_STATE(StateWin)        \
+_STATE(StateTests)      \
 STATE_DEF_END
 
 #define SPRITES \
-_SPRITE_COLOR(SPRITE_PRINCESS, princess ) \
-_SPRITE_COLOR(SPRITE_ZURRAPA,  zurrapa  ) \
-_SPRITE_COLOR(SPRITE_PARTICLE, particles) \
-_SPRITE_COLOR(SPRITE_AXE,      princess ) \
-_SPRITE_COLOR(SPRITE_AZNAR,    aznar    ) \
-_SPRITE_COLOR(SPRITE_FLAG,     flag     ) \
+_SPRITE_COLOR(SpritePrincess, princess ) \
+_SPRITE_COLOR(SpriteZurrapa,  zurrapa  ) \
+_SPRITE_COLOR(SpriteParticle, particles) \
+_SPRITE_COLOR(SpriteAxe,      princess ) \
+_SPRITE_COLOR(SpriteAznar,    aznar    ) \
+_SPRITE_COLOR(SpriteFlag,     flag     ) \
 SPRITE_DEF_END
 
 #include "ZGBMain_Init.h"

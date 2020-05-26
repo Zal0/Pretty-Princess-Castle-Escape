@@ -1,6 +1,5 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_STATE_GAME_OVER = 2;
 
 #include <gb/gb.h>
 #include "ZGBMain.h"
@@ -12,16 +11,15 @@ UINT8 bank_STATE_GAME_OVER = 2;
 
 extern const unsigned char * gameover_mod_Data[];
 
-void Start_STATE_GAME_OVER() {
-	InitScrollTiles(0, &tilesgameover);
+void Start_StateGameOver() {
 	InitScroll(&gameover, 0, 0);
 	SHOW_BKG;
 
 	PlayMusic(gameover_mod_Data, 3, 0);
 }
 
-void Update_STATE_GAME_OVER() {
+void Update_StateGameOver() {
 	if(KEY_TICKED(J_START)) {
-		SetState(STATE_MENU);
+		SetState(StateMenu);
 	}
 }

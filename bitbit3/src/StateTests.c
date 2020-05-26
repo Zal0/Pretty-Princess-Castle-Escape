@@ -1,6 +1,5 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_STATE_TESTS = 2;
 
 #include <gb/gb.h>
 #include <stdio.h>
@@ -10,7 +9,7 @@ UINT8 bank_STATE_TESTS = 2;
 #include "SpriteManager.h"
 extern UINT8 sprite_manager_sprites_mem[];
 
-void Start_STATE_TESTS() {
+void Start_StateTests() {
 	/*UINT8 i;
 	DECLARE_STACK(s_test, 20);
 	DECLARE_VECTOR(v_test, 20);
@@ -35,6 +34,6 @@ void Start_STATE_TESTS() {
 	}*/
 }
 
-void Update_STATE_TESTS() {
+void Update_StateTests() {
 
 }

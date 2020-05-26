@@ -1,6 +1,5 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_SPRITE_ZURRAPA = 2;
 
 #include <gb/gb.h>
 
@@ -9,13 +8,13 @@ UINT8 bank_SPRITE_ZURRAPA = 2;
 
 const UINT8 anim_zurrapa_idle[] = {2, 0, 1};
 
-void Start_SPRITE_ZURRAPA() {
+void Start_SpriteZurrapa() {
 	SetSpriteAnim(THIS, anim_zurrapa_idle, 5u);
 }
 
-void Update_SPRITE_ZURRAPA() {
+void Update_SpriteZurrapa() {
 	
 }
 
-void Destroy_SPRITE_ZURRAPA() {
+void Destroy_SpriteZurrapa() {
 }

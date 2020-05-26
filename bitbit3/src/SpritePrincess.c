@@ -1,6 +1,5 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_SPRITE_PRINCESS = 2;
 
 #include "gb/gb.h"
 
@@ -36,7 +35,7 @@ extern UINT16 reset_x;
 extern UINT16 reset_y;
 extern UINT8 level;
 
-void Start_SPRITE_PRINCESS() {
+void Start_SpritePrincess() {
 	SetSpriteAnim(THIS, anim_idle, 3u);
 	THIS->coll_x += 4u;
 	THIS->coll_w -= 8u;
@@ -54,7 +53,7 @@ void Start_SPRITE_PRINCESS() {
 
 void Die(struct Sprite* sprite, UINT8 idx) {
 	SpriteManagerRemove(idx);
-	game_over_particle = SpriteManagerAdd(SPRITE_PARTICLE, sprite->x, sprite->y);
+	game_over_particle = SpriteManagerAdd(SpriteParticle, sprite->x, sprite->y);
 	scroll_target = 0;
 }
 
@@ -64,12 +63,12 @@ void CheckCollisionTile(struct Sprite* sprite, UINT8 idx) {
 		Die(sprite, idx);
 	} else if(tile_collision == 53u) {
 		if(level == 1) {
-			SetState(STATE_WIN);
+			SetState(StateWin);
 		} else {
 			level ++;
 			reset_x = 32;
 			reset_y = 112;
-			SetState(STATE_GAME);
+			SetState(StateGame);
 		}
 	}
 }
@@ -105,7 +104,8 @@ void UpdateAxePos() {
 	axe_sprite->y = THIS->y;
 }
 
-void Update_SPRITE_PRINCESS() {
+#include <gb/bgb_emu.h>
+void Update_SpritePrincess() {
 	UINT8 i;
 	struct Sprite* spr;
 
@@ -168,34 +168,36 @@ void Update_SPRITE_PRINCESS() {
 	}
 #endif
 
+BGB_PROFILE_BEGIN();
 	//Check enemy collision
 	for(i = 0u; i != sprite_manager_updatables[0]; ++i) {
 		spr = sprite_manager_sprites[sprite_manager_updatables[i + 1u]];
-		if(spr->type == SPRITE_ZURRAPA || spr->type == SPRITE_AZNAR) {
+		if(spr->type == SpriteZurrapa || spr->type == SpriteAznar) {
 			if(CheckCollision(THIS, spr)) {
 				Die(THIS, THIS_IDX);
 			}
-		} else if(spr->type == SPRITE_FLAG) {
+		} else if(spr->type == SpriteFlag) {
 			if(CheckCollision(THIS, spr)) {
 				reset_x = spr->x;
 				reset_y = spr->y;
 			}
 		}
 	}
+BGB_PROFILE_END(Coll);
 
 	if(KEY_TICKED(J_B) && princes_state != PRINCESS_STATE_FIRE) {
 		SetSpriteAnim(THIS, anim_fire, 15u);
 		princes_state = PRINCESS_STATE_FIRE;
 
-		axe_sprite = SpriteManagerAdd(SPRITE_AXE, THIS->x, THIS->y);
+		axe_sprite = SpriteManagerAdd(SpriteAxe, THIS->x, THIS->y);
 		UpdateAxePos();
 	}
 
 
 	/*if(KEY_TICKED(J_B) ) {
-		sprite_test = SpriteManagerAdd(SPRITE_ZURRAPA, THIS->x, THIS->y);
+		sprite_test = SpriteManagerAdd(SpriteZurrapa, THIS->x, THIS->y);
 	}*/
 }
 
-void Destroy_SPRITE_PRINCESS() {
+void Destroy_SpritePrincess() {
 }

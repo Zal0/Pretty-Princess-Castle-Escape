@@ -1,6 +1,5 @@
-#pragma bank 2
+#include "Banks/SetBank2.h"
 #include "main.h"
-UINT8 bank_STATE_DISCLAIMER = 0;
 
 #include <gb/gb.h>
 
@@ -8,7 +7,7 @@ UINT8 bank_STATE_DISCLAIMER = 0;
 #include "main.h"
 #include "Keys.h"
 
-void Start_STATE_DISCLAIMER() {
+void Start_StateDisclaimer() {
 /*	printf("                    ");
 	printf("       Warning      ");
 	printf("                    ");
@@ -28,9 +27,9 @@ void Start_STATE_DISCLAIMER() {
 	printf("  www.bitbitjam.com ");*/
 }
 
-void Update_STATE_DISCLAIMER() {
+void Update_StateDisclaimer() {
 	/*if(KEY_TICKED(J_START)) {
 		disable_interrupts();
-		SetState(STATE_MENU);
+		SetState(StateMenu);
 	}*/
 }

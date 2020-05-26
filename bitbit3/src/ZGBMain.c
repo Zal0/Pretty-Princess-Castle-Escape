@@ -1,14 +1,14 @@
 #include "ZGBMain.h"
 
-UINT8 next_state = STATE_MENU;
+UINT8 next_state = StateMenu;
 
 UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {
-	if(current_state == STATE_GAME) {
+	if(current_state == StateGame) {
 		*tile = 0;
 		switch(*tile_ptr) {
-				case 54: return SPRITE_ZURRAPA;
-				case 55: return SPRITE_AZNAR;
-				case 60: return SPRITE_FLAG;
+				case 54: return SpriteZurrapa;
+				case 55: return SpriteAznar;
+				case 60: return SpriteFlag;
 		}
 		*tile = *tile_ptr;
 	}
