@@ -5,11 +5,12 @@
 #include "ZGBMain.h"
 #include "Scroll.h"
 #include "Keys.h"
+#include "Music.h"
 
 #include "../res/src/splash.h"
 #include "../res/src/splashtiles.h"
 
-extern const unsigned char * start_mod_Data[];
+DECLARE_MUSIC(start);
 
 extern UINT8 level;
 extern UINT16 reset_x;
@@ -25,7 +26,8 @@ void Start_StateMenu() {
 	SHOW_BKG;
 
 	level = 0;
-	PlayMusic(start_mod_Data, 2, 1);
+	
+	PlayMusic(start, 1);
 }
 
 void Update_StateMenu() {

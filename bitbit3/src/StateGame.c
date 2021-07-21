@@ -12,7 +12,7 @@
 #include "../res/src/carnage.h"
 
 #include "ZGBMain.h"
-#include "gbt_player.h"
+#include "Music.h"
 
 #include "Palette.h"
 #include "../res/src/princess.h"
@@ -20,8 +20,7 @@
 const UINT16 spritesPAL[] = {PALETTE_FROM_HEADER(princess)};
 const UINT16 bgPAL[] = {PALETTE_FROM_HEADER(carnage)};
 
-
-extern const unsigned char * level_mod_Data[];
+DECLARE_MUSIC(level);
 
 const UINT8 collision_tiles[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 47, 48, 53, 56, 57, 58, 59, 0};
 
@@ -70,7 +69,7 @@ void Start_StateGame() {
 #endif
 		BGP_REG = PAL_DEF(0, 1, 2, 0);
 
-	PlayMusic(level_mod_Data, 3, 1);
+	PlayMusic(level, 1);
 }
 
 void Update_StateGame() {

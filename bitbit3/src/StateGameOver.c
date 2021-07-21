@@ -5,17 +5,18 @@
 #include "ZGBMain.h"
 #include "Scroll.h"
 #include "Keys.h"
+#include "Music.h"
 
 #include "../res/src/gameovertiles.h"
 #include "../res/src/gameovermap.h"
 
-extern const unsigned char * gameover_mod_Data[];
+DECLARE_MUSIC(gameover);
 
 void Start_StateGameOver() {
 	InitScroll(&gameover, 0, 0);
 	SHOW_BKG;
 
-	PlayMusic(gameover_mod_Data, 3, 0);
+	PlayMusic(gameover, 0);
 }
 
 void Update_StateGameOver() {
