@@ -2,20 +2,17 @@
 #include "main.h"
 
 #include "Scroll.h"
-#include "Frame.h"
 #include "Sprite.h"
 #include "Keys.h"
 #include "SpriteManager.h"
 
-#include "../res/src/map.h"
-#include "../res/src/map2.h"
-#include "../res/src/carnage.h"
+IMPORT_MAP(level1);
+IMPORT_MAP(level2);
 
 #include "ZGBMain.h"
 #include "Music.h"
 
 #include "Palette.h"
-#include "../res/src/princess.h"
 
 const UINT16 spritesPAL[] = {PALETTE_FROM_HEADER(princess)};
 const UINT16 bgPAL[] = {PALETTE_FROM_HEADER(carnage)};

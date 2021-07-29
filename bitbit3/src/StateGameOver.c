@@ -7,8 +7,7 @@
 #include "Keys.h"
 #include "Music.h"
 
-#include "../res/src/gameovertiles.h"
-#include "../res/src/gameovermap.h"
+IMPORT_MAP(gameover);
 
 DECLARE_MUSIC(gameover);
 

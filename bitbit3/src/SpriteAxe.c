@@ -7,7 +7,7 @@
 #include "ZGBMain.h"
 
 void Start_SpriteAxe() {
-	SET_FRAME(THIS, (UINT8)9u);
+	SetFrame(THIS, 9);
 }
 
 void Update_SpriteAxe() {

@@ -7,9 +7,7 @@
 #include "Keys.h"
 #include "Music.h"
 
-#include "../res/src/splash.h"
-#include "../res/src/splashtiles.h"
-
+IMPORT_MAP(splashmap);
 DECLARE_MUSIC(start);
 
 extern UINT8 level;
@@ -33,7 +31,7 @@ void Start_StateMenu() {
 void Update_StateMenu() {
 	if(KEY_TICKED(J_START)) {
 		reset_x = 32;
-		reset_y = 112;
+		reset_y = 114;
 		SetState(StateGame);
 	}
 

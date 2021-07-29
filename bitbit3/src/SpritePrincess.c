@@ -9,8 +9,6 @@
 #include "Scroll.h"
 #include "SpriteManager.h"
 
-#include "../res/src/princess.h"
-
 //#define DEBUG_CONTROLS
 
 //Princes anims
@@ -37,10 +35,10 @@ extern UINT8 level;
 
 void Start_SpritePrincess() {
 	SetSpriteAnim(THIS, anim_idle, 3u);
-	THIS->coll_x += 4u;
-	THIS->coll_w -= 8u;
-	THIS->coll_y += 2u;
-	THIS->coll_h -= 2u;
+	//THIS->coll_x += 4u;
+	//THIS->coll_w -= 8u;
+	//THIS->coll_y += 2u;
+	//THIS->coll_h -= 2u;
 
 	princess_accel_y = 0;
 
@@ -76,11 +74,11 @@ void CheckCollisionTile(struct Sprite* sprite, UINT8 idx) {
 void MovePrincess(struct Sprite* sprite, UINT8 idx) {
 	if(KEY_PRESSED(J_RIGHT)) {
 		tile_collision = TranslateSprite(sprite, 1 << delta_time, 0);
-		SPRITE_UNSET_VMIRROR(THIS);
+		THIS->mirror = NO_MIRROR;
 		CheckCollisionTile(sprite, idx);
 	} else if(KEY_PRESSED(J_LEFT)) {
 		tile_collision = TranslateSprite(sprite, -1 << delta_time, 0);
-		SPRITE_SET_VMIRROR(THIS);
+		THIS->mirror = V_MIRROR;
 		CheckCollisionTile(sprite, idx);
 	}
 	
@@ -96,8 +94,8 @@ void MovePrincess(struct Sprite* sprite, UINT8 idx) {
 }
 
 void UpdateAxePos() {
-	axe_sprite->flags = THIS->flags;
-	if(SPRITE_GET_VMIRROR(THIS)) 
+	axe_sprite->mirror = THIS->mirror;
+	if(THIS->mirror == V_MIRROR) 
 		axe_sprite->x = THIS->x - 16u;
 	else
 		axe_sprite->x = THIS->x + 16u; 
@@ -179,7 +177,7 @@ BGB_PROFILE_BEGIN();
 		} else if(spr->type == SpriteFlag) {
 			if(CheckCollision(THIS, spr)) {
 				reset_x = spr->x;
-				reset_y = spr->y;
+				reset_y = spr->y + 2;
 			}
 		}
 	}

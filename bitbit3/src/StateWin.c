@@ -7,8 +7,7 @@
 #include "Keys.h"
 #include "Music.h"
 
-#include "../res/src/winmap.h"
-#include "../res/src/splashtiles.h"
+IMPORT_MAP(winmap);
 
 #include "Palette.h"
 const UINT16 bgPALWin[] = {PALETTE_FROM_HEADER(splashtiles)};
