@@ -26,7 +26,7 @@ void Start_StateMenu() {
 void Update_StateMenu() {
 	if(KEY_TICKED(J_START)) {
 		reset_x = 32;
-		reset_y = 114;
+		reset_y = 112;
 		SetState(StateGame);
 	}
 

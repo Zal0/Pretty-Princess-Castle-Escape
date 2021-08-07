@@ -177,7 +177,7 @@ BGB_PROFILE_BEGIN();
 		} else if(spr->type == SpriteFlag) {
 			if(CheckCollision(THIS, spr)) {
 				reset_x = spr->x;
-				reset_y = spr->y + 2;
+				reset_y = spr->y;
 			}
 		}
 	}

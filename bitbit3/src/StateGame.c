@@ -43,7 +43,7 @@ void Start_StateGame() {
 	SpriteManagerLoad(SpriteFlag);
 	SHOW_SPRITES;
 	
-	princess_sprite = SpriteManagerAdd(SpritePrincess, reset_x, reset_y);
+	princess_sprite = SpriteManagerAdd(SpritePrincess, reset_x, reset_y + 2);
 
 	switch(level) {
 		case 0:
