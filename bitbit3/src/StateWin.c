@@ -9,14 +9,9 @@
 
 IMPORT_MAP(winmap);
 
-#include "Palette.h"
-const UINT16 bgPALWin[] = {PALETTE_FROM_HEADER(splashtiles)};
-
 DECLARE_MUSIC(gameover);
 
 void Start_StateWin() {
-	SetPalette(BG_PALETTE, 0, 8, bgPALWin, bank_StateWin);
-
 	InitScroll(&winmap, 0, 0);
 	SHOW_BKG;
 
