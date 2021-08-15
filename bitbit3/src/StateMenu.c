@@ -15,7 +15,7 @@ extern UINT16 reset_x;
 extern UINT16 reset_y;
 
 void Start_StateMenu() {
-	InitScroll(&splashmap, 0, 0);
+	InitScroll(BANK(splashmap), &splashmap, 0, 0);
 	SHOW_BKG;
 
 	level = 0;

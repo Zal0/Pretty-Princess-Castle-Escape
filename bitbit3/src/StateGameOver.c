@@ -12,7 +12,7 @@ IMPORT_MAP(gameover);
 DECLARE_MUSIC(gameover);
 
 void Start_StateGameOver() {
-	InitScroll(&gameover, 0, 0);
+	InitScroll(BANK(gameover), &gameover, 0, 0);
 	SHOW_BKG;
 
 	PlayMusic(gameover, 0);

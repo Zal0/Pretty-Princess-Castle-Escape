@@ -47,10 +47,10 @@ void Start_StateGame() {
 
 	switch(level) {
 		case 0:
-			InitScroll(&level1, collision_tiles, 0);
+			InitScroll(BANK(level1), &level1, collision_tiles, 0);
 			break;
 		case 1:
-			InitScroll(&level2, collision_tiles, 0);
+			InitScroll(BANK(level2), &level2, collision_tiles, 0);
 			break;
 	}
 	SHOW_BKG;
