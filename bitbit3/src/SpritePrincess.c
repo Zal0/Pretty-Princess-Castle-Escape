@@ -102,7 +102,6 @@ void UpdateAxePos() {
 	axe_sprite->y = THIS->y;
 }
 
-#include <gb/bgb_emu.h>
 void Update_SpritePrincess() {
 	UINT8 i;
 	struct Sprite* spr;
@@ -166,7 +165,6 @@ void Update_SpritePrincess() {
 	}
 #endif
 
-BGB_PROFILE_BEGIN();
 	//Check enemy collision
 	for(i = 0u; i != sprite_manager_updatables[0]; ++i) {
 		spr = sprite_manager_sprites[sprite_manager_updatables[i + 1u]];
@@ -181,7 +179,6 @@ BGB_PROFILE_BEGIN();
 			}
 		}
 	}
-BGB_PROFILE_END(Coll);
 
 	if(KEY_TICKED(J_B) && princes_state != PRINCESS_STATE_FIRE) {
 		SetSpriteAnim(THIS, anim_fire, 15u);
