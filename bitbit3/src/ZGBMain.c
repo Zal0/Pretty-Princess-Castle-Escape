@@ -2,15 +2,20 @@
 
 UINT8 next_state = StateMenu;
 
-UINT8 GetTileReplacement(UINT8* tile_ptr, UINT8* tile) {
+extern UINT8* tile_replacement_tile_ptr;
+extern UINT8* tile_replacement_ptr;
+extern UINT8  tile_replacement_enemy_type;
+
+void GetTileReplacement() {
 	if(current_state == StateGame) {
-		*tile = 0;
-		switch(*tile_ptr) {
-				case 54: return SpriteZurrapa;
-				case 55: return SpriteAznar;
-				case 60: return SpriteFlag;
+		*tile_replacement_ptr = 0;
+		switch(*tile_replacement_tile_ptr) {
+				case 54: tile_replacement_enemy_type = SpriteZurrapa; return;
+				case 55: tile_replacement_enemy_type = SpriteAznar; return;
+				case 60: tile_replacement_enemy_type = SpriteFlag; return;
 		}
-		*tile = *tile_ptr;
 	}
-	return 255u;
+
+	tile_replacement_enemy_type = 255u;
+	*tile_replacement_ptr = *tile_replacement_tile_ptr;
 }
