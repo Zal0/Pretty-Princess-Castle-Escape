@@ -25,9 +25,9 @@ typedef enum  {
 PRINCESS_STATE princes_state;
 INT16 princess_accel_y;
 
-struct Sprite* axe_sprite;
+Sprite* axe_sprite;
 
-extern struct Sprite* game_over_particle;
+extern Sprite* game_over_particle;
 
 extern UINT16 reset_x;
 extern UINT16 reset_y;
@@ -49,14 +49,14 @@ void Start_SpritePrincess() {
 	axe_sprite = 0;
 }
 
-void Die(struct Sprite* sprite, UINT8 idx) {
+void Die(Sprite* sprite, UINT8 idx) {
 	SpriteManagerRemove(idx);
 	game_over_particle = SpriteManagerAdd(SpriteParticle, sprite->x, sprite->y);
 	scroll_target = 0;
 }
 
 UINT8 tile_collision;
-void CheckCollisionTile(struct Sprite* sprite, UINT8 idx) {
+void CheckCollisionTile(Sprite* sprite, UINT8 idx) {
 	if(tile_collision == 33u) {
 		Die(sprite, idx);
 	} else if(tile_collision == 53u) {
@@ -71,7 +71,7 @@ void CheckCollisionTile(struct Sprite* sprite, UINT8 idx) {
 	}
 }
 
-void MovePrincess(struct Sprite* sprite, UINT8 idx) {
+void MovePrincess(Sprite* sprite, UINT8 idx) {
 	if(KEY_PRESSED(J_RIGHT)) {
 		tile_collision = TranslateSprite(sprite, 1 << delta_time, 0);
 		THIS->mirror = NO_MIRROR;
@@ -104,7 +104,7 @@ void UpdateAxePos() {
 
 void Update_SpritePrincess() {
 	UINT8 i;
-	struct Sprite* spr;
+	Sprite* spr;
 
 	switch(princes_state) {
 		case PRINCESS_STATE_NORMAL:

@@ -12,8 +12,8 @@ void Start_SpriteAxe() {
 
 void Update_SpriteAxe() {
 	UINT8 i;
-	struct Sprite* spr;
-	struct Sprite* spr2;
+	Sprite* spr;
+	Sprite* spr2;
 
 	for(i = 0u; i != sprite_manager_updatables[0]; ++i) {
 		spr = sprite_manager_sprites[sprite_manager_updatables[i + 1u]];

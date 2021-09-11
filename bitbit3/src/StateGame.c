@@ -22,7 +22,7 @@ UINT16 reset_x;
 UINT16 reset_y;
 UINT8 level;
 
-struct Sprite* game_over_particle;
+Sprite* game_over_particle;
 
 extern UINT8 spriteIdxs[];
 void SpriteManagerLoadSubsprite(UINT8 sprite_type, UINT8 sprite_type_source) {
@@ -30,7 +30,7 @@ void SpriteManagerLoadSubsprite(UINT8 sprite_type, UINT8 sprite_type_source) {
 }
 
 void Start_StateGame() {
-	struct Sprite* princess_sprite;
+	Sprite* princess_sprite;
 
 	game_over_particle = 0;
 
