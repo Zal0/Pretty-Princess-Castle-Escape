@@ -16,10 +16,9 @@ extern UINT16 reset_y;
 
 void Start_StateMenu() {
 	InitScroll(BANK(splashmap), &splashmap, 0, 0);
-	SHOW_BKG;
-
-	level = 0;
 	
+	level = 0;
+
 	PlayMusic(start, 1);
 }
 

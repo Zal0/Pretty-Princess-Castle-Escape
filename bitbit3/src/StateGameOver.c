@@ -13,7 +13,6 @@ DECLARE_MUSIC(gameover);
 
 void Start_StateGameOver() {
 	InitScroll(BANK(gameover), &gameover, 0, 0);
-	SHOW_BKG;
 
 	PlayMusic(gameover, 0);
 }

@@ -33,16 +33,6 @@ void Start_StateGame() {
 	Sprite* princess_sprite;
 
 	game_over_particle = 0;
-
-	SPRITES_8x16;
-	SpriteManagerLoad(SpritePrincess);
-	SpriteManagerLoadSubsprite(SpriteAxe, SpritePrincess);
-	SpriteManagerLoad(SpriteZurrapa);
-	SpriteManagerLoad(SpriteParticle);
-	SpriteManagerLoad(SpriteAznar);
-	SpriteManagerLoad(SpriteFlag);
-	SHOW_SPRITES;
-	
 	princess_sprite = SpriteManagerAdd(SpritePrincess, reset_x, reset_y + 2);
 
 	switch(level) {
@@ -53,7 +43,6 @@ void Start_StateGame() {
 			InitScroll(BANK(level2), &level2, collision_tiles, 0);
 			break;
 	}
-	SHOW_BKG;
 
 #ifdef CGB
 	if(_cpu != CGB_TYPE)

@@ -13,7 +13,6 @@ DECLARE_MUSIC(gameover);
 
 void Start_StateWin() {
 	InitScroll(BANK(winmap), &winmap, 0, 0);
-	SHOW_BKG;
 
 	PlayMusic(gameover, 0);
 }
