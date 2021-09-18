@@ -29,7 +29,7 @@ void SpriteManagerLoadSubsprite(UINT8 sprite_type, UINT8 sprite_type_source) {
 	spriteIdxs[sprite_type] = spriteIdxs[sprite_type_source];
 }
 
-void Start_StateGame() {
+void START() {
 	Sprite* princess_sprite;
 
 	game_over_particle = 0;
@@ -52,7 +52,7 @@ void Start_StateGame() {
 	PlayMusic(level, 1);
 }
 
-void Update_StateGame() {
+void UPDATE() {
 	if(game_over_particle && game_over_particle->anim_frame == 5) {
 		SetState(StateGame);
 	}

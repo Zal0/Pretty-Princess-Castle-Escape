@@ -33,7 +33,7 @@ extern UINT16 reset_x;
 extern UINT16 reset_y;
 extern UINT8 level;
 
-void Start_SpritePrincess() {
+void START() {
 	SetSpriteAnim(THIS, anim_idle, 3u);
 	//THIS->coll_x += 4u;
 	//THIS->coll_w -= 8u;
@@ -102,7 +102,7 @@ void UpdateAxePos() {
 	axe_sprite->y = THIS->y;
 }
 
-void Update_SpritePrincess() {
+void UPDATE() {
 	UINT8 i;
 	Sprite* spr;
 
@@ -194,5 +194,5 @@ void Update_SpritePrincess() {
 	}*/
 }
 
-void Destroy_SpritePrincess() {
+void DESTROY() {
 }

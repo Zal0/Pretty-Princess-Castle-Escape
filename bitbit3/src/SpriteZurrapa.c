@@ -8,13 +8,13 @@
 
 const UINT8 anim_zurrapa_idle[] = {2, 0, 1};
 
-void Start_SpriteZurrapa() {
+void START() {
 	SetSpriteAnim(THIS, anim_zurrapa_idle, 5u);
 }
 
-void Update_SpriteZurrapa() {
+void UPDATE() {
 	
 }
 
-void Destroy_SpriteZurrapa() {
+void DESTROY() {
 }

@@ -9,11 +9,11 @@ const UINT8 anim_flag_enabled[] = {1, 1};
 extern UINT16 reset_x;
 extern UINT16 reset_y;
 
-void Start_SpriteFlag() {
+void START() {
 	SetSpriteAnim(THIS, anim_flag_idle, 5u);
 }
 
-void Update_SpriteFlag() {
+void UPDATE() {
 	if(THIS->anim_data == anim_flag_idle) {
 		if(reset_x == THIS->x && reset_y == THIS->y) {
 			SetSpriteAnim(THIS, anim_flag_enabled, 5u);
@@ -21,5 +21,5 @@ void Update_SpriteFlag() {
 	}
 }
 
-void Destroy_SpriteFlag() {
+void DESTROY() {
 }

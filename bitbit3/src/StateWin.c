@@ -11,13 +11,13 @@ IMPORT_MAP(winmap);
 
 DECLARE_MUSIC(gameover);
 
-void Start_StateWin() {
+void START() {
 	InitScroll(BANK(winmap), &winmap, 0, 0);
 
 	PlayMusic(gameover, 0);
 }
 
-void Update_StateWin() {
+void UPDATE() {
 	if(KEY_TICKED(J_START)) {
 		SetState(StateMenu);
 	}

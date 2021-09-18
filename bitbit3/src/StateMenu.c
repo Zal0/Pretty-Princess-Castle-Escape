@@ -14,7 +14,7 @@ extern UINT8 level;
 extern UINT16 reset_x;
 extern UINT16 reset_y;
 
-void Start_StateMenu() {
+void START() {
 	InitScroll(BANK(splashmap), &splashmap, 0, 0);
 	
 	level = 0;
@@ -22,7 +22,7 @@ void Start_StateMenu() {
 	PlayMusic(start, 1);
 }
 
-void Update_StateMenu() {
+void UPDATE() {
 	if(KEY_TICKED(J_START)) {
 		reset_x = 32;
 		reset_y = 112;

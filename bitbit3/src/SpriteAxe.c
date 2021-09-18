@@ -6,11 +6,11 @@
 #include "SpriteManager.h"
 #include "ZGBMain.h"
 
-void Start_SpriteAxe() {
+void START() {
 	SetFrame(THIS, 9);
 }
 
-void Update_SpriteAxe() {
+void UPDATE() {
 	UINT8 i;
 	Sprite* spr;
 	Sprite* spr2;
@@ -27,5 +27,5 @@ void Update_SpriteAxe() {
 	}
 }
 
-void Destroy_SpriteAxe() {
+void DESTROY() {
 }

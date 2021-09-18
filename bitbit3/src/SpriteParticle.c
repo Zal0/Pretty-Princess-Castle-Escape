@@ -5,16 +5,16 @@
 
 const UINT8 anim_explosion[] = {6, 0, 1, 2, 3, 4, 5};
 
-void Start_SpriteParticle() {
+void START() {
 	SetSpriteAnim(THIS, anim_explosion, 5u);
 	THIS->anim_speed = 33u;
 }
 
-void Update_SpriteParticle() {
+void UPDATE() {
 	if(THIS->anim_frame == 5) {
 		SpriteManagerRemove(THIS_IDX);
 	}
 }
 
-void Destroy_SpriteParticle() {
+void DESTROY() {
 }

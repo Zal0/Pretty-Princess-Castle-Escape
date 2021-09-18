@@ -6,7 +6,7 @@
 
 const UINT8 anim_aznar_walk[] = {8, 0, 1, 2, 3, 4, 3, 2, 1};
 
-void Start_SpriteAznar() {
+void START() {
 	SetSpriteAnim(THIS, anim_aznar_walk, 20u);
 
 	//THIS->coll_x += 4;
@@ -15,7 +15,7 @@ void Start_SpriteAznar() {
 	THIS->lim_y = 160u;
 }
 
-void Update_SpriteAznar() {
+void UPDATE() {
 	if(THIS->mirror == V_MIRROR) {
 		//moving left
 		if(TranslateSprite(THIS, -1, 0)) {
@@ -33,5 +33,5 @@ void Update_SpriteAznar() {
 	}
 }
 
-void Destroy_SpriteAznar() {
+void DESTROY() {
 }

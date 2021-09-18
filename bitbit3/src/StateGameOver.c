@@ -11,13 +11,13 @@ IMPORT_MAP(gameover);
 
 DECLARE_MUSIC(gameover);
 
-void Start_StateGameOver() {
+void START() {
 	InitScroll(BANK(gameover), &gameover, 0, 0);
 
 	PlayMusic(gameover, 0);
 }
 
-void Update_StateGameOver() {
+void UPDATE() {
 	if(KEY_TICKED(J_START)) {
 		SetState(StateMenu);
 	}
