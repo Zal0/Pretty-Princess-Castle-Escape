@@ -49,6 +49,7 @@ void START() {
 #endif
 		BGP_REG = PAL_DEF(0, 1, 2, 0);
 
+	stop_music_on_new_state = 0;
 	PlayMusic(level, 1);
 }
 
