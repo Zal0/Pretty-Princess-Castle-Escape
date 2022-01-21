@@ -35,9 +35,6 @@
     <ClCompile Include="src\SpriteZurrapa.c">
       <Filter>Source Files\Sprites</Filter>
     </ClCompile>
-    <ClCompile Include="src\StateDisclaimer.c">
-      <Filter>Source Files\States</Filter>
-    </ClCompile>
     <ClCompile Include="src\StateGame.c">
       <Filter>Source Files\States</Filter>
     </ClCompile>
@@ -45,9 +42,6 @@
       <Filter>Source Files\States</Filter>
     </ClCompile>
     <ClCompile Include="src\StateMenu.c">
-      <Filter>Source Files\States</Filter>
-    </ClCompile>
-    <ClCompile Include="src\StateTests.c">
       <Filter>Source Files\States</Filter>
     </ClCompile>
     <ClCompile Include="src\StateWin.c">

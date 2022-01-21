@@ -2,12 +2,10 @@
 #define ZGBMAIN_H
 
 #define STATES           \
-_STATE(StateDisclaimer) \
 _STATE(StateMenu)       \
 _STATE(StateGame)       \
 _STATE(StateGameOver)  \
 _STATE(StateWin)        \
-_STATE(StateTests)      \
 STATE_DEF_END
 
 #define SPRITES \
