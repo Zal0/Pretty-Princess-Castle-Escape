@@ -12,7 +12,7 @@ IMPORT_MAP(winmap);
 DECLARE_MUSIC(gameover);
 
 void START() {
-	InitScroll(BANK(winmap), &winmap, 0, 0);
+	INIT_BKG(winmap);
 
 	PlayMusic(gameover, 0);
 }

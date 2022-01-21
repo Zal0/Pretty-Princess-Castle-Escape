@@ -15,8 +15,8 @@ extern UINT16 reset_x;
 extern UINT16 reset_y;
 
 void START() {
-	InitScroll(BANK(splashmap), &splashmap, 0, 0);
-	
+	INIT_BKG(splashmap);
+
 	level = 0;
 
 	PlayMusic(start, 1);
